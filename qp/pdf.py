@@ -924,7 +924,7 @@ class PDF(object):
             [min_x, max_x] = [min(self.samples), max(self.samples)]
             extrema = [min(extrema[0], min_x), max(extrema[1], max_x)]
             [min_x, max_x] = extrema
-            x = np.linspace(min_x, max_x, 100)
+            x = np.linspace(min_x, max_x, 1000)
             plt.scatter(self.samples, np.zeros(np.shape(self.samples)), color=colors['samples'], marker='|', s=100, label='Samples', alpha=0.75)
             (grid, sinterpolated) = self.approximate(x, vb=vb,
                                                      using='samples')
